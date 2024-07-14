@@ -1,0 +1,15 @@
+
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px; 
+  }
+  
+  @media (max-width: 768px) {
+    .wrapper {
+      flex-direction: column; 
+    }
+  }
+  
