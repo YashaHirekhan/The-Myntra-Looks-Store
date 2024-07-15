@@ -7,7 +7,7 @@ import Collaborators from '../components/Collaborators'
 import NavBar from '../components/NavBar'
 import LookGrid from '../components/LookGrid'
 import { createWishList,getWishListItems,joinWishList } from "../actions/look";
-
+import "../components/CollabCart.css"
 
 
 const CollabCart = () => {
@@ -50,20 +50,21 @@ const CollabCart = () => {
     <div>
         <NavBar/>
         <Collaborators wishListId={wishListId}/>
-        <div>
+        <div className="cart__wrapper">
           {
             !wishListId? <div>
-                  <button onClick={handleCreateWishList}>Create WishList</button>
+                  <button className="create__btn" onClick={handleCreateWishList}>Create CollabCart</button>
                   <br></br>
-                  <h3>Or</h3>
+                  <h3 className="text">Or</h3>
                   <div>
-                    <h1>JOIN WishList</h1>
+                    <h1 className=" heading">JOIN CollabCart</h1>
                   <input
+                    className="id__input"
                     type="text"
-                    placeholder="Enter Wishlist ID"
+                    placeholder="Enter CollabCart ID"
                     onChange={(e)=>setId(e.target.value)}
                   />
-                  <button onClick={handleJoinWishList}>Join Wishlist</button>
+                  <button className="join__btn" onClick={handleJoinWishList}>Join CollabCart</button>
                 </div>
               </div>: 
               <div>

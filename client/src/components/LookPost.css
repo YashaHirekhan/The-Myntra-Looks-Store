@@ -156,4 +156,14 @@
     border-radius: 20px;
     background-color: #f9f9f9;
   }
+
+  .avatar{
+    width: 60px;
+    height: 60px;
+    font-size: x-large;
+    margin-right: 10px;
+  }
   
+  .username{
+    margin-bottom: 10px;
+  }

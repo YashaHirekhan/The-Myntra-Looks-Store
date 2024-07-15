@@ -1,6 +1,5 @@
-
-
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 import { useDispatch } from 'react-redux';
 import { createPost } from '../actions/look';
 import uploadIcon from './assets/image.png';
@@ -8,6 +7,7 @@ import './CreatePost.css';
 
 const CreatePost = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [caption, setCaption] = useState('');
   const [productLink, setProductLink] = useState('');
   const [trendTags, setTrendTags] = useState(['']);
@@ -41,6 +41,8 @@ const CreatePost = () => {
     formData.append('trendTags', JSON.stringify(trendTags));
 
     dispatch(createPost(formData));
+
+    navigate('/'); 
   };
 
   return (
@@ -50,11 +52,11 @@ const CreatePost = () => {
           <input
             type="file"
             id="image"
-            name="image"  // Added name attribute
+            name="image"
             onChange={handleImageChange}
             required
             className="upload-input"
-            style={{ display: 'none' }} // Ensure the input is hidden
+            style={{ display: 'none' }}
           />
           <div className="upload-content">
             <img src={uploadIcon} alt="Upload Icon" className="upload-icon" />
@@ -99,11 +101,11 @@ const CreatePost = () => {
               </button>
             </div>
           ))}
-          <div className="form-group tags">
-            <button type="button" onClick={handleAddTrendTag}>+</button>
+          <div className="tags">
+            <button type="button" className=" add-tag-button" onClick={handleAddTrendTag}>+</button>
           </div>
         </div>
-        <button type="submit" className="submit-button">Submit</button>
+        <button type="submit" className="form-group submit-button">Submit</button>
       </form>
     </div>
   );

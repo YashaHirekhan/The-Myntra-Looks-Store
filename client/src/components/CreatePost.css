@@ -1,152 +1,179 @@
 .create-post {
-    max-width: 800px; /* Limits the maximum width of the container */
-    margin: 0 auto; /* Centers the container horizontally */
-    padding: 20px; /* Adds padding inside the container */
-    border-radius: 5px; /* Rounds the corners of the container */
-    background-color: #fff; /* Sets the background color of the container */
-  }
-  
-  .upload-picture {
-    width: 680px; /* Fixed width */
-    height: 544px; /* Fixed height */
-    background-color: #FFDBDB; /* Background color */
-    display: flex; /* Uses flexbox to center content */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    cursor: pointer; /* Shows a pointer cursor on hover */
-    border-radius: 8px; /* Rounds the corners */
-    position: relative; /* Position relative for child absolute positioning */
-  }
-  
-  .create-post h1 {
-    text-align: center; /* Centers the heading text */
-    margin-bottom: 20px; /* Adds space below the heading */
-  }
-  
-  .create-post .form-group {
-    margin-bottom: 15px; /* Adds space below form group */
-  }
-  
-  .create-post .upload-container {
-    width: 680px; /* Fixed width */
-    height: 544px; /* Fixed height */
-    background-color: #FFDBDB; /* Background color */
-    display: flex; /* Uses flexbox to center content */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    border: 2px dashed #ccc; /* Dashed border */
-    position: relative; /* Position relative for child absolute positioning */
-    cursor: pointer; /* Shows a pointer cursor on hover */
-    margin: 0 auto 15px auto; /* Centers horizontally and adds margin below */
-  }
-  
-  .create-post .upload-container .upload-input {
-    opacity: 0; /* Hides the file input */
-    width: 100%; /* Full width of the container */
-    height: 100%; /* Full height of the container */
-    position: absolute; /* Positioned absolutely within .upload-container */
-    cursor: pointer; /* Shows a pointer cursor on hover */
-  }
-  
-  .create-post .upload-container .upload-content {
-    text-align: center; /* Centers text content inside */
-  }
-  
-  .create-post .upload-container .upload-content img {
-    width: 100px; /* Fixed width for images */
-    height: 100px; /* Fixed height for images */
-    margin-bottom: 10px; /* Adds space below the image */
-  }
-  
-  .create-post .upload-container .upload-content p {
-    font-size: 18px; /* Sets font size */
-    color: #333; /* Sets text color */
-  }
-  
-  .create-post .form-group input[type="text"] {
-    width: 100%; /* Full width of the container */
-    padding: 15px; /* Adds padding inside the input */
-    box-sizing: border-box; /* Includes padding and border in width */
-    border: 1px solid #ddd; /* Sets border color */
-    border-radius: 8px; /* Rounds the corners */
-    background-color: #FFDBDB; /* Background color */
-    font-size: 16px; /* Sets font size */
-    margin-bottom: 15px; /* Adds space below the input */
-  }
-  
-  .create-post .trend-tag {
-    display: flex; /* Uses flexbox */
-    justify-content: center; /* Centers content horizontally */
-    gap: 10px; /* Adds space between items */
-  }
-  
-  .create-post .add-trend-tag,
-  .create-post .add-key {
-    padding: 10px 20px; /* Adds padding inside the button */
-    border: none; /* Removes border */
-    border-radius: 8px; /* Rounds the corners */
-    cursor: pointer; /* Shows a pointer cursor on hover */
-    background-color: #FFDBDB; /* Background color */
-    font-size: 16px; /* Sets font size */
-    color: #333; /* Sets text color */
-  }
-  
-  .create-post .add-key {
-    width: 40px; /* Fixed width */
-    height: 40px; /* Fixed height */
-    display: flex; /* Uses flexbox */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-  }
-  
-  .create-post .submit-button {
-    display: block; /* Makes the button a block element */
-    width: 100%; /* Full width of the container */
-    padding: 15px; /* Adds padding inside the button */
-    border: none; /* Removes border */
-    background-color: #28a745; /* Background color */
-    color: #fff; /* Text color */
-    border-radius: 8px; /* Rounds the corners */
-    cursor: pointer; /* Shows a pointer cursor on hover */
-    font-size: 18px; /* Sets font size */
-  }
-  
-  .create-post .submit-button:hover {
-    background-color: #218838; /* Changes background color on hover */
-  }
-  
-  .last-two {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .create-post .add-trend-tag {
-    font-weight: bold; /* Makes the button text bold */
-  }
-  
-  .create-post .add-key {
-    font-weight: bold; /* Makes the "+" sign bold */
-  }
-  .form-group{
-    width: 680px;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
 
-  .tags{
-    padding: 10px;
-    max-width:fit-content;
-  }
+.upload-picture {
+  width: 680px;
+  height: 544px;
+  background-color: #FFDBDB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+}
 
-  .tag-item {
-    display: flex;
-    align-items: center;
-  }
+.create-post h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.create-post .form-group {
+  margin-bottom: 15px;
+}
+
+.create-post .upload-container {
+  width: 680px;
+  height: 544px;
+  background-color: #FFDBDB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #ccc;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto 15px auto;
+}
+
+.create-post .upload-container .upload-input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.create-post .upload-container .upload-content {
+  text-align: center;
+}
+
+.create-post .upload-container .upload-content img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.create-post .upload-container .upload-content p {
+  font-size: 18px;
+  color: #333;
+}
+
+.create-post .form-group input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #FFDBDB;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+
+}
+
+.create-post .trend-tag {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.create-post .add-trend-tag,
+.create-post .add-key {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #FFDBDB;
+  font-size: 16px;
+  color: #333;
+}
+
+.create-post .add-key {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-post .submit-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: #0b0b0b;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.create-post .submit-button:hover {
+  background-color: #f7a4c6;
+}
+
+.last-two {
+  display: flex;
+  gap: 20px;
+}
+
+.create-post .add-trend-tag {
+  font-weight: bold;
+}
+
+.create-post .add-key {
+  font-weight: bold;
+}
+
+.form-group {
+  width: 800px;
+  font-weight: 600;
   
-  .remove-tag-button {
-    background: none;
-    border: none;
-    color: rgb(6, 6, 6);
-    font-size: 1.2em;
-    margin-left: 5px;
-    cursor: pointer;
-  }
+}
+
+.tags {
+  padding: 10px;
+  max-width: fit-content;
+}
+
+.tag-item {
+  position: relative;
+  display: inline-block;
+  background-color: #FFDADB;
+  border-radius: 12px;
+  margin: 5px;
+}
+
+.tag-item input {
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.remove-tag-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  color: rgb(6, 6, 6);
+  font-size: 1.2em;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.add-tag-button{
+  border: none;
+  border-radius: 3px;
+  font-size: larger;
+  font-weight: 900;
+  height: 30px;
+  margin-top: 5px;
+  color: #fff;
+  background-color: #0b0b0b;
   
+}

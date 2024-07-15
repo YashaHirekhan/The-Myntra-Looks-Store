@@ -14,4 +14,8 @@ export const instance = axios.create({
     return await instance.get("/get-posts");
   };
 
+  export const getPostById = async (postId) => {
+    return await instance.get(`/get-post-by-id/${postId}`);
+  };
+  
  

@@ -8,7 +8,8 @@ import {
   FETCH_POSTS,
   CREATE_WISHLIST,
   FETCH_WISHLIST,
-  JOIN_WISHLIST
+  JOIN_WISHLIST,
+  FETCH_POST_BY_ID,
 } from "../actions/look";
 
 const INITIAL_STATE = {
@@ -16,60 +17,10 @@ const INITIAL_STATE = {
   saved: [],
   posts: [],
   wishListId:null,
-  wishlist:[]
+  wishlist:[],
+  selectedPost: null,
 };
 
-// const lookReducer = (state = INITIAL_STATE, action) => {
-//   switch (action.type) {
-//     case FETCH_SAVED_LOOKS:
-//       return {
-//         ...state,
-//         saved: action.photoUrls,
-//       };
-//     case SET_FEED:
-//       return {
-//         ...state,
-//         feed: action.photoUrls,
-//       };
-//     case SAVE_LOOK:
-//       return {
-//         ...state,
-//         saved: [...state.saved, action.photoUrl],
-//       };
-//     case DELETE_SAVED_LOOK:
-//       return {
-//         ...state,
-//         saved: state.saved.filter((url) => url !== action.photoUrl),
-//       };
-//     case CREATE_POST:
-//       return {
-//         ...state,
-//         feed: [action.post.image, ...state.feed],
-//       };
-//     case FETCH_POSTS:
-//       return {
-//         ...state,
-//         posts: action.posts,
-//       };
-//       case CREATE_WISHLIST:
-//         return {
-//           ...state,
-//           wishListId: action.wishlist.wishListId,
-//         };
-//         case JOIN_WISHLIST:
-//         return {
-//           ...state,
-//           wishListId: action.wishlistId,
-//         };
-//         case FETCH_WISHLIST:
-//           return {
-//             ...state,
-//             wishlist: action.wishListItems,
-//           };
-//     default:
-//       return state;
-//   }
-// };
 
 const lookReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
@@ -120,6 +71,11 @@ const lookReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         wishlist: action.wishListItems,
+      };
+    case FETCH_POST_BY_ID:
+      return {
+        ...state,
+        selectedPost: action.post,
       };
     default:
       return state;
