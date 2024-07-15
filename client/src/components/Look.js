@@ -31,50 +31,6 @@ const SaveButton = ({ userId, photoUrl, isSaved }) => {
   );
 };
 
-
-// const Look = ({ userId, photoUrl, isSaved, post }) => {
- 
-  
-  
-//   const dispatch = useDispatch();
-//   const navigate = useNavigate();
-//   const [showButton, setShowButton] = useState(false);
-//   const { wishListId } = useSelector((state) => state.look);
-
-
-
-//   const handleClick=()=>{
-//     dispatch(addToWishList(wishListId,post));
-//   }
-
-//   const handleOpenLookPage = () => {
-//     navigate(`/look/${post.id}`);
-//   };
-
-//   return (
-//     <div>
-//       <div className="Look__wrapper">
-//         <div
-//           className="Look__container"
-//           onMouseOver={() => setShowButton(true)}
-//           onMouseLeave={() => setShowButton(false)}
-//         >
-//           <div onClick={handleOpenLookPage}>
-//             <img src={photoUrl} alt="Look" />
-//           </div>
-//           {showButton && (
-//             <div key={`look-btn-${photoUrl}`}>
-//             <SaveButton userId={userId} photoUrl={photoUrl} isSaved={isSaved} />
-//             {wishListId?<button onClick={handleClick}>W</button>:null}
-//             </div>
-//           )}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Look;
 const Look = ({ userId, photoUrl, isSaved, post }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();

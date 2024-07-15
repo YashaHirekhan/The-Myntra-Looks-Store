@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 export const instance = axios.create({
-  baseURL: "/api/users",
+  baseURL:`${process.env.REACT_APP_BASE_URL}/api/users`,
 });
 
 export const signup = async (userData) => {

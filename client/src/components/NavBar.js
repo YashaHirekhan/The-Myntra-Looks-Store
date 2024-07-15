@@ -15,9 +15,9 @@ const NavBar = ({ query }) => {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    const searchQuery = event.target.query.value.trim(); // Trim whitespace
+    const searchQuery = event.target.query.value.trim(); 
     if (searchQuery) {
-      navigate(`/search/${encodeURIComponent(searchQuery)}`); // Encode search query
+      navigate(`/search/${encodeURIComponent(searchQuery)}`); 
     }
   };
 

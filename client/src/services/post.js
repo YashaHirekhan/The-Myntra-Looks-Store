@@ -1,6 +1,6 @@
 import axios from "axios";
 export const instance = axios.create({
-    baseURL: "/api/post",
+    baseURL: `${process.env.REACT_APP_BASE_URL}/api/post`,
   });
 
   export const createPost = async (postData) => {
